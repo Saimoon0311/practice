@@ -32,16 +32,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-function Home({navigation}) {
+export default function Home({navigation}) {
   return (
-  <View>
-<Text>Hello </Text>
-<Button title='about' onPress={()=>navigation.navigate('bout')} />
-          </View>
-  );
-};
+      <View>
+          <Text>Home Component</Text>
+          <Button title="Click me" onPress={()=>navigation.navigate('About')} />
+      </View>
+  )
+} 
 
 const styles = StyleSheet.create({
  });
 
-export default Home;
+// export default Home;

@@ -5,39 +5,24 @@
  * @format
  * @flow strict-local
  */
+import 'react-native-gesture-handler';
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-import Navigation from "./assets/config/navigation";
-import Home from "./assets/screen/home";
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { View, Text } from 'react-native';
+import Navigation from './assets/config/navigation';
+import { NavigationContainer } from '@react-navigation/native';
 
-function App() {
-  
-
+const App = () => {
   return (
-  <View>
-{/* <Navigation/> */}
-<Home/>
-{/* <Text>Hello Hello</Text> */}
-  </View>
+    <NavigationContainer>
+        <Navigation />
+    </NavigationContainer>
   );
 };
 
-const styles = StyleSheet.create({
+
+export default App;
+// const styles = StyleSheet.create({
   // scrollView: {
   //   backgroundColor: Colors.,
   // },
@@ -74,6 +59,6 @@ const styles = StyleSheet.create({
   //   paddingRight: 12,
   //   textAlign: 'right',
   // },
-});
+// });
 
-export default App;
+// export default App;
